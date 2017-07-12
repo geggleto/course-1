@@ -14,6 +14,11 @@ use Slim\Http\Response;
 
 class MyInvokableClass
 {
+    /**
+     * @param Request $request
+     * @param Response $response
+     * @return Response
+     */
     public function __invoke(Request $request, Response $response)
     {
         return $response->write('Invokables are cool!');

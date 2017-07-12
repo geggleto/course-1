@@ -16,7 +16,7 @@ $app->get('/', function (Request $request, Response $response) {
 });
 
 
-$app->get('/controller/myotheraction', [MyController::class, ":myaction"]);
+$app->get('/controller/myotheraction', MyController::class.":myaction");
 
 //Catch All
 $app->get('/controller/{action}', function (Request $request, Response $response, array $args) {
