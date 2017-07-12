@@ -11,9 +11,7 @@ $container = new Slim\Container(include __DIR__."/../config/container.php");
 $app = new Slim\App($container);
 
 //Simple Route!
-$app->get('/', function (Request $request, Response $response) {
-   return $response->write('Hello Student!!!!');
-});
+$app->get('/', \MyApp\Http\HomeAction::class);
 
 
 $app->get('/controller/myotheraction', MyController::class.":myaction");
