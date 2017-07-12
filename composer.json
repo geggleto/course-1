@@ -1,0 +1,13 @@
+{
+    "require": {
+        "slim/slim": "^3.8"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "MyApp\\" : "src"
+        }
+    },
+    "scripts" : {
+        "run" : "php -S localhost:8888 -t public public/index.php"
+    }
+}
